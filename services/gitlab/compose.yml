@@ -1,0 +1,13 @@
+services:
+  gitlab:
+    image: gitlab/gitlab-ce:19.4.0-ce.0
+    restart: always
+    hostname: 'gitlab.lab'
+    environment:
+      GITLAB_OMNIBUS_CONFIG: |
+        external_url 'http://gitlab.lab'
+    volumes:
+      - '/opt/gitlab/config:/etc/gitlab'
+      - '/opt/gitlab/logs:/var/log/gitlab'
+      - '/opt/gitlab/data:/var/opt/gitlab'
+    shm_size: '256m'
