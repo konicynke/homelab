@@ -4,10 +4,10 @@ http:
     gitlab-router:
       entrypoints:
       - web
-      services: gitlab
+      service: gitlab
       rule: Host(`gitlab.ops.local`)
   
-  service:
+  services:
     gitlab:
       loadBalancer:
         servers:
