@@ -16,3 +16,7 @@ services:
       - type: bind
         source: ./dynamic
         target: /etc/traefik/dynamic
+
+networks:
+  traefik:
+    name: traefik
