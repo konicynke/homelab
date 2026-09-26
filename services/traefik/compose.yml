@@ -3,7 +3,7 @@ services:
     image: traefik:v3.7
     command:
       - "--api.insecure=true"
-      - "--providers.file.directory=dynamic"
+      - "--providers.file.directory=/etc/traefik/dynamic"
       - "--providers.file.watch=true"
       - "--entrypoints.web.address=:80"
     networks:
