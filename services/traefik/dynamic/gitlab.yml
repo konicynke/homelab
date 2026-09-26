@@ -4,11 +4,11 @@ http:
     gitlab-router:
       entrypoints:
       - web
-      service: gitlab
-      rule: Host('gitlab.ops.local')
+      services: gitlab
+      rule: Host(`gitlab.ops.local`)
   
   service:
     gitlab:
       loadBalancer:
         servers:
-         - url: "192.168.100.32:80"
+         - url: "http://192.168.100.32:80"
