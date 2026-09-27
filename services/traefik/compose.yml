@@ -1,8 +1,7 @@
 services:
   traefik:
     image: traefik:v3.7
-    networks:
-      - traefik
+    container_name: traefik
     ports:
       - "80:80"
       - "443:443"
@@ -17,7 +16,3 @@ services:
       - type: bind
         source: ./certs
         target: /etc/traefik/certs
-
-networks:
-  traefik:
-    name: traefik
