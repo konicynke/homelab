@@ -2,9 +2,9 @@
 tls:
   certificates:
     - certFile: /etc/traefik/certs/wildcard.pem
-    - keyFile: /etc/traefik/certs/wildcard-key.pem
+      keyFile: /etc/traefik/certs/wildcard-key.pem
   stores:
     default:
-      defaultCertificates:
-        - certFile: /etc/traefik/certs/wildcard.pem
-        - keyFile: /etc/traefik/certs/wildcard-key.pem
+      defaultCertificate:
+        certFile: /etc/traefik/certs/wildcard.pem
+        keyFile: /etc/traefik/certs/wildcard-key.pem
