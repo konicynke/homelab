@@ -5,6 +5,7 @@ services:
       - traefik
     ports:
       - "80:80"
+      - "443:443"
       - "8080:8080"
     volumes:
       - type: bind
@@ -13,6 +14,9 @@ services:
       - type: bind
         source: ./traefik.yml
         target: /etc/traefik/traefik.yml
+      - type: bind
+        source: ./certs
+        target: /etc/traefik/certs
 
 networks:
   traefik:

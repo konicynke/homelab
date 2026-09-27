@@ -3,7 +3,7 @@ http:
   routers:
     gitlab-router:
       entrypoints:
-      - web
+      - websecure
       service: gitlab
       rule: Host(`gitlab.ops.local`)
   
