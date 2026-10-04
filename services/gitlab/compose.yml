@@ -10,6 +10,7 @@ services:
     environment:
       GITLAB_OMNIBUS_CONFIG: |
         external_url 'http://gitlab.ops.local'
+        gitlab_rails['gitlab_shell_ssh_port'] = 2222
     volumes:
       - '/opt/gitlab/config:/etc/gitlab'
       - '/opt/gitlab/logs:/var/log/gitlab'
